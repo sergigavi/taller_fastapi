@@ -15,6 +15,6 @@ Base = declarative_base()
 def get_db() -> Session:
     db = SessionLocal()
     try:
-        yield db
+        yield db #genera una instancia de database cada vez que queremos acceder
     finally:
         db.close()
